@@ -509,3 +509,77 @@ body {
 .work-item h4 a:hover {
     text-decoration: underline;
 }
+/* Work Page Specific Styles */
+.work-page-main {
+    padding: 4rem 0 6rem 0;
+}
+
+.work-header {
+    margin-bottom: 3.5rem;
+}
+
+.work-header h1 {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    letter-spacing: -0.03em;
+    margin-bottom: 0.8rem;
+}
+
+.work-header p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+}
+
+.work-spotlight-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.spotlight-feature-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.work-spotlight-info h2 {
+    font-size: 1.8rem;
+    margin: 0.6rem 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.work-spotlight-info p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.work-category-section {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+    .work-spotlight-card {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+}
