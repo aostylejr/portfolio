@@ -465,3 +465,47 @@ body {
     object-fit: cover;
     display: block;
 }
+/* Work Grid Item Styling */
+.work-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: var(--bg-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.work-item:hover {
+    border-color: var(--text-secondary);
+}
+
+/* Image Thumbnail Link Wrapper */
+.work-thumb-link {
+    display: block;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Thumbnail Image Display */
+.work-thumb-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover .work-thumb-img {
+    transform: scale(1.03); /* Subtle zoom effect on hover */
+}
+
+/* Typography & Links */
+.work-item h4 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.work-item h4 a:hover {
+    text-decoration: underline;
+}
