@@ -583,3 +583,79 @@ body {
         gap: 1.5rem;
     }
 }
+/* Category Header Layout */
+.category-header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.6rem;
+}
+
+.category-title {
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    margin: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.category-count {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Horizontal Scroll Container Track */
+.scrollable-work-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(25% - 1.125rem); /* Exactly fits ~4 items in view */
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+/* Individual Card Sizing inside Horizontal Track */
+.work-item-scroll {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    background: var(--bg-color);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.work-item-scroll:hover {
+    border-color: var(--text-secondary);
+}
+
+.work-item-scroll h4 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.work-item-scroll h4 a:hover {
+    text-decoration: underline;
+}
+
+.work-item-scroll p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+/* Responsive adjustment for tablets and mobile */
+@media (max-width: 1024px) {
+    .scrollable-work-track {
+        grid-auto-columns: calc(45% - 1rem); /* 2 items visible */
+    }
+}
+
+@media (max-width: 640px) {
+    .scrollable-work-track {
+        grid-auto-columns: calc(85% - 1rem); /* 1 item visible with peek */
+    }
+}
