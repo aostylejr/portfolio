@@ -896,3 +896,43 @@ body {
         gap: 2rem;
     }
 }
+/* Large Square Presentation Showcase (Image Only) */
+.presentation-showcase {
+    margin-bottom: 5rem;
+}
+
+.presentation-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.presentation-image-full a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.presentation-image-full a:hover {
+    opacity: 0.95;
+    transform: scale(1.01);
+}
+
+.presentation-image-full img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Forces a perfect large square presentation block */
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .presentation-card {
+        padding: 1rem;
+    }
+}
+
